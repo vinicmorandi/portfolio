@@ -270,7 +270,7 @@ onUnmounted(() => {
 
 .petal {
   pointer-events: none;
-  background: url(http://talktofill.surge.sh/cherry-blossom.png) no-repeat;
+  background: url(/images/cherry-blossom.png) no-repeat;
 
   &.petal-style1 {
     width: 45px;
