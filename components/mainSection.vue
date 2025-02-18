@@ -104,7 +104,7 @@ onMounted(() => {
       </div>
 
       <main>
-        <h1 class="pt-40 ml6 text-7xl font-black">
+        <h1 class="pt-32 ml6 text-7xl font-black">
           <span class="text-wrapper">
             <span class="letters">{{ $t('mainSection.welcome') }}</span>
           </span>
