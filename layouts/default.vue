@@ -13,6 +13,17 @@ const distance = computed(() =>
 )
 
 const size = computed(() => Math.max(600 - distance.value / 4, 200))
+
+definePageMeta({
+  colorMode: 'light',
+})
+
+useSeoMeta({
+  title: 'Portfolio - Vinícius Morandi',
+  ogTitle: 'Portfolio - Vinícius Morandi',
+  description: "I'm Vinícius Morandi, a software developer that specializes in creating phenomenal digital experiences.",
+  ogDescription: "I'm Vinícius Morandi, a software developer that specializes in creating phenomenal digital experiences.",
+})
 </script>
 
 <template>
