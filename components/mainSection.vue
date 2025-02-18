@@ -10,7 +10,7 @@ defineEmits(['activateSection'])
 
 const socials = [
   {
-    href: 'https://gmail.com',
+    href: 'mailto:viniciuscmorandi@gmail.com',
     icon: 'line-md:email',
     text: 'Send me an Email',
   },
@@ -20,7 +20,7 @@ const socials = [
     text: 'LinkedIn',
   },
   {
-    href: 'https://github.com/',
+    href: 'https://github.com/vinicmorandi',
     icon: 'line-md:github',
     text: 'Github',
   },
@@ -133,7 +133,7 @@ onMounted(() => {
             <AnimatedTooltip
               :text="social.text"
             >
-              <a :href="social.href" target="_blank">
+              <a :href="social.href" :target="social.href.includes('mailto') ? null : '_blank'">
                 <Icon size="30" :name="social.icon" style="color: #a855f7;" />
               </a>
             </AnimatedTooltip>
