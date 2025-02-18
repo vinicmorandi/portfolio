@@ -24,6 +24,7 @@ const experiences = [
       'Vue',
       'React',
       'Flutter',
+      'Typescript',
       'Laravel',
       'Deno',
       'Postgres',
@@ -45,7 +46,7 @@ const experiences = [
     endDate: 'May 2024',
     description:
       'Collaborated with UncommonGood, a key U.S.-based business partner, to optimize their platform by making feature enhancements tailored for nonprofit organizations. Partnered with cross-functional teams of developers, marketing specialists, and designers to deliver scalable solutions, including an invoice and proposal management system, donation tracking tools and a sweepstakes platform to boost donor engagement, an integration with Stripe plans and Stripe Checkout, and a UI/UX redesign that improved platform usability and increased client satisfaction.',
-    tags: ['Vue', 'Laravel', 'Postgres', 'Deno', 'Vitest', 'Nonprofits', 'MySQL', 'Stripe', 'Checkout'],
+    tags: ['Vue', 'Laravel', 'Typescript', 'Postgres', 'Deno', 'Vitest', 'Nonprofits', 'MySQL', 'Stripe', 'Checkout'],
   },
   {
     url: 'https://eccosys.com.br/',

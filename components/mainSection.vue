@@ -100,8 +100,7 @@ onMounted(() => {
 
         <h2 id="presentation" class="text-3xl mt-4 font-extrabold">
           My name is
-          <span class="text-purple-500">Vinícius Morandi</span>
-          , and I build applications on the web
+          <span class="text-purple-500">Vinícius Morandi</span>, and I build applications on the web
         </h2>
       </main>
 
@@ -124,7 +123,7 @@ onMounted(() => {
         </nav>
 
         <footer>
-          <ul class="flex gap-1 mt-40 -ml-4">
+          <ul class="flex gap-1 mt-32 -ml-4">
             <li
             v-for="social in socials"
             :key="social.icon"
