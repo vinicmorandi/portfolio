@@ -92,11 +92,9 @@ onMounted(() => {
 
     <div class="testimonial">
       <p class="text-base text-gray-400">
-        In my spare time, I'm usually climbing, reading, hanging out with my
-        wife and 
-        <span class="cute-text" @mouseover="activateCherry" @mouseout="deactivateCherry">two cats</span>,
-        or running around Hyrule searching for Korok
-        seeds.
+        In my spare time, I'm usually reading, hanging out with 
+        <span class="cute-text font-semibold" @mouseover="activateCherry" @mouseout="deactivateCherry">Cherry</span>,
+        or trying to get a golden seal on all jokers in Balatro.
       </p>
     </div>
     
