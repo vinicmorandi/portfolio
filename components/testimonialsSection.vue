@@ -15,7 +15,7 @@ onMounted(() => {
 
 <template>
   <section class="flex flex-col justify-center items-center h-full mx-auto px-8">
-    <div
+    <article
       class="testimonial flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 pb-10"
     >
       <NuxtImg
@@ -52,11 +52,11 @@ onMounted(() => {
           </div>
         </figcaption>
       </figure>
-    </div>
+    </article>
 
     <div class="testimonial border-t h-[1px] w-full border-white/10 mt-10"/>
 
-    <div class="testimonial flex flex-col pt-10">
+    <article class="testimonial flex flex-col pt-10">
       <NuxtImg
         class="h-12 self-start -ml-2 -mb-4"
         src="/logos/saguiai.webp"
@@ -87,6 +87,6 @@ onMounted(() => {
           </div>
         </figcaption>
       </figure>
-    </div>
+    </article>
   </section>
 </template>

@@ -1,15 +1,9 @@
-<script>
-
-</script>
-
 <template>
   <div id="app">
-    <ClientOnly>
-      <NuxtLayout>
-        <NuxtRouteAnnouncer />
-        <NuxtPage />
-      </NuxtLayout>
-    </ClientOnly>
+    <NuxtLayout>
+      <NuxtRouteAnnouncer />
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 

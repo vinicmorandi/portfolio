@@ -1,13 +1,9 @@
 <script setup>
-// import anime from "animejs/lib/anime.es.js"
-
-const teste = (aa) => {
-  console.log(aa)
-}
+defineOgImageComponent('default', {
+  title: 'Welcome'
+})
 </script>
 
 <template>
-  <div>
-    <PortfolioHeader @activate-section="teste" />
-  </div>
+  <MainSection/>
 </template>

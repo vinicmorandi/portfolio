@@ -1,5 +1,6 @@
 <script setup>
 import { useMouse, useWindowSize } from "@vueuse/core"
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 const { x, y } = useMouse()
 const { width, height } = useWindowSize()
@@ -27,5 +28,6 @@ const size = computed(() => Math.max(600 - distance.value / 4, 200))
     <div>
       <slot />
     </div>
+    <SpeedInsights />
   </div>
 </template>

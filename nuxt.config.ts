@@ -10,9 +10,13 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxt/fonts',
+    '@nuxtjs/seo',
   ],
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    },
   },
   i18n: {
     vueI18n: './i18n.config.ts',
@@ -21,5 +25,10 @@ export default defineNuxtConfig({
       { code: 'pt', language: 'pt-BR' }
     ],
     defaultLocale: 'en',
+  },
+  site: {
+    url: 'https://vinicmorandi.vercel.app/',
+    name: 'Portfolio - Vinícius Morandi',
+    description: "I'm Vinícius Morandi, a software developer that specializes in creating phenomenal digital experiences.",
   },
 })
