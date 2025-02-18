@@ -229,10 +229,15 @@ const myBlossomSceneConfig: BlossomSceneConfig = {
 };
 
 const scene = ref<null | BlossomScene>(null)
+const audio = ref<null | HTMLAudioElement>(null)
 
 onMounted(() => {
   document.body.style.cursor = `none`
   scene.value = new BlossomScene(myBlossomSceneConfig);
+
+  audio.value = new Audio('/audios/pixel-playground-color-parade-main-version-25382-01-43.mp3')
+  audio.value.volume = 0.2
+  audio.value.play()
 })
 
 onUnmounted(() => {
@@ -240,6 +245,11 @@ onUnmounted(() => {
 
   if (scene.value && scene.value.interval) {
     clearInterval(scene.value.interval)
+  }
+
+  if (audio.value) {
+    audio.value.pause();
+    audio.value.currentTime = 0;
   }
 })
 </script>

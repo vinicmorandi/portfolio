@@ -26,28 +26,21 @@ onMounted(() => {
       <figure class="mt-10 flex flex-auto flex-col justify-between">
         <blockquote class="text-base text-gray-300">
           <p>
-            "It is a pleasure to recommend Vinícius. An exceptional
-            professional, with consistent and above-average deliveries and
-            results. Capable of exceeding expectations in any challenge he
-            faces. In addition to his impressive technical skills, Vinícius is
-            an excellent team player, always willing to share knowledge and
-            contribute to collective success. Any team would be lucky to have
-            him on board, and I am confident that he will contribute positively
-            from day one.”
+            "{{$t('testimonialsSection.marcio.text')}}”
           </p>
         </blockquote>
         <figcaption class="mt-10 flex items-center gap-x-6">
           <NuxtImg
             class="size-14 rounded-full bg-gray-800"
             src="/images/marcio.jpg"
-            alt="Márcio Bortolini dos Santos, Lead Software Engineer at Sagui.AI"
+            :alt="`Márcio Bortolini dos Santos, ${$t('testimonialsSection.marcio.position')}`"
           />
           <div class="text-base">
             <div class="font-semibold text-white">
               Márcio Bortolini dos Santos
             </div>
             <div class="mt-1 text-gray-400">
-              Lead Software Engineer at Sagui.AI
+              {{ $t('testimonialsSection.marcio.position') }}
             </div>
           </div>
         </figcaption>
@@ -65,25 +58,18 @@ onMounted(() => {
       <figure class="mt-10 flex flex-auto flex-col justify-between">
         <blockquote class="text-base text-gray-300">
           <p>
-            “Vinícius is an exceptional professional, highly committed to his
-            deliveries and an exemplary coworker. His ease of getting along with
-            others and his brilliance as a programmer make him stand out in any
-            team. There are professionals who meet expectations, others who
-            exceed them, but Vinícius goes beyond. He belongs to the rare
-            category of those who consistently excel in all aspects. I recommend
-            Vinícius without reservation for any challenge or opportunity he
-            decides to pursue in the technology field.”
+            {{ $t('testimonialsSection.fabio.text') }}”
           </p>
         </blockquote>
         <figcaption class="mt-10 flex items-center gap-x-6">
           <NuxtImg
             class="size-14 rounded-full bg-gray-800"
             src="/images/fabio.jpg"
-            alt="Fábio Brand, CEO of Sagui.AI"
+            :alt="`Fábio Brand, ${$t('testimonialsSection.fabio.position')}`"
           />
           <div class="text-base">
             <div class="font-semibold text-white">Fábio Brand</div>
-            <div class="mt-1 text-gray-400">CEO of Sagui.AI</div>
+            <div class="mt-1 text-gray-400">{{ $t('testimonialsSection.fabio.position') }}</div>
           </div>
         </figcaption>
       </figure>

@@ -1,6 +1,8 @@
 <script setup>
 import anime from 'animejs/lib/anime.es.js'
 
+const { t } = useI18n()
+
 onMounted(() => {
   anime.timeline({ loop: false }).add({
     targets: '.experience',
@@ -12,14 +14,14 @@ onMounted(() => {
   })
 })
 
-const experiences = [
+const experiences = computed(() => [
   {
     url: 'https://sagui.ai',
-    position: 'Software Development Specialist',
+    position: t('experiencesSection.sagui.position'),
     company: 'Sagui.AI',
-    startDate: 'May 2024',
-    endDate: 'Present',
-    description: `Worked on a website generator, a mobile app generator with collaborative features, and a WhatsApp automation system for custom workflows and AI-generated content. I also designed a social media planner that streamlines scheduling, analytics, and posting, while migrating the codebase to the latest Vue 3 + Nuxt framework—integrating comprehensive testing along the way—and developing scalable, accessible components and APIs that enhance the overall platform functionality.`,
+    startDate: t('experiencesSection.sagui.startDate'),
+    endDate: t('experiencesSection.sagui.endDate'),
+    description: t('experiencesSection.sagui.description'),
     tags: [
       'Vue',
       'React',
@@ -40,45 +42,41 @@ const experiences = [
   },
   {
     url: 'https://www.linkedin.com/company/onlycontrol-software/',
-    position: 'Full-Stack Developer',
+    position: t('experiencesSection.onlyControl.position'),
     company: 'OnlyControl',
-    startDate: 'April 2023',
-    endDate: 'May 2024',
-    description:
-      'Collaborated with UncommonGood, a key U.S.-based business partner, to optimize their platform by making feature enhancements tailored for nonprofit organizations. Partnered with cross-functional teams of developers, marketing specialists, and designers to deliver scalable solutions, including an invoice and proposal management system, donation tracking tools and a sweepstakes platform to boost donor engagement, an integration with Stripe plans and Stripe Checkout, and a UI/UX redesign that improved platform usability and increased client satisfaction.',
+    startDate: t('experiencesSection.onlyControl.startDate'),
+    endDate: t('experiencesSection.onlyControl.endDate'),
+    description: t('experiencesSection.onlyControl.description'),
     tags: ['Vue', 'Laravel', 'Typescript', 'Postgres', 'Deno', 'Vitest', 'Nonprofits', 'MySQL', 'Stripe', 'Checkout'],
   },
   {
     url: 'https://eccosys.com.br/',
-    position: 'Full-Stack Developer',
+    position: t('experiencesSection.eccosys.position'),
     company: 'Eccosys',
-    startDate: 'August 2022',
-    endDate: 'December 2022',
-    description:
-      'Integrated diverse logistics APIs and e-commerce platforms through custom solutions, maintained and enhanced system dashboards and APIs, and developed space calculation systems to optimize logistics operations. This multifaceted role allowed me to work seamlessly across the technology stack, ensuring cohesive and efficient system performance.',
+    startDate: t('experiencesSection.eccosys.startDate'),
+    endDate: t('experiencesSection.eccosys.endDate'),
+    description: t('experiencesSection.eccosys.description'),
     tags: ['Angular', 'PHP', 'MySQL', 'Node', 'ERP', 'Logistics'],
   },
   {
     url: 'https://includer.com.br/',
-    position: 'Junior Front-End Developer',
+    position: t('experiencesSection.includer.position'),
     company: 'Includer',
-    startDate: 'March 2022',
-    endDate: 'August 2022',
-    description:
-      "Developed both the front-end and back-end of the company's e-commerce platform, ensuring a smooth user experience and reliable functionality. I also authored clear, comprehensive documentation to support the development team, contributing to overall project efficiency and collaboration.",
+    startDate: t('experiencesSection.includer.startDate'),
+    endDate: t('experiencesSection.includer.endDate'),
+    description: t('experiencesSection.includer.description'),
     tags: ['React', 'Redux', 'Laravel', 'Postgres', 'E-commerce'],
   },
   {
     url: 'https://eccosys.com.br/',
-    position: 'Web Development Intern',
+    position: t('experiencesSection.eccosysInternship.position'),
     company: 'Eccosys',
-    startDate: 'September 2021',
-    endDate: 'April 2022',
-    description:
-      'Had my first experience developing websites on a professional setting, fixed bugs and added new features and customizations to a monolithic code base, and developed a strong understanding of scalability challenges, third-party integrations, and sustainable code architecture through hands-on collaboration in refining legacy systems and delivering tailored solutions.',
+    startDate: t('experiencesSection.eccosysInternship.startDate'),
+    endDate: t('experiencesSection.eccosysInternship.endDate'),
+    description: t('experiencesSection.eccosysInternship.description'),
     tags: ['Angular', 'PHP', 'MySQL', 'ERP'],
   },
-]
+])
 </script>
 
 <template>

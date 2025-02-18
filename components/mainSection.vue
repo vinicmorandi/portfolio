@@ -8,11 +8,15 @@ import anime from 'animejs/lib/anime.es.js'
 
 defineEmits(['activateSection'])
 
-const socials = [
+const { t, locale, setLocale } = useI18n()
+
+const activeSection = ref(null)
+
+const socials = computed(() => [
   {
     href: 'mailto:viniciuscmorandi@gmail.com',
     icon: 'line-md:email',
-    text: 'Send me an Email',
+    text: t('mainSection.socials.email'),
   },
   {
     href: 'https://www.linkedin.com/in/vinicmorandi/',
@@ -30,28 +34,26 @@ const socials = [
     text: 'Instagram',
   },
   {
-    href: 'https://docs.google.com/document/d/1U2_Nj58VzFFuh9HxCjgWuMLv2zqxR3asJSThPFgnerw/edit?usp=sharing',
+    href: t('mainSection.socials.resumeUrl'),
     icon: 'line-md:document-list',
-    text: 'Resumé',
+    text: t('mainSection.socials.resume'),
   },
-]
+])
 
-const sections = [
+const sections = computed(() => [
   {
-    text: 'About Me',
+    text: t('mainSection.sections.aboutMe'),
     component: LazyAboutMeSection,
   },
   {
-    text: 'Experiences',
+    text: t('mainSection.sections.experiences'),
     component: LazyExperiencesSection,
   },
   {
-    text: 'Testimonials',
+    text: t('mainSection.sections.testimonials'),
     component: LazyTestimonialsSection,
   },
-]
-
-const activeSection = ref(null)
+])
 
 onMounted(() => {
   const textWrapper = document.querySelector('.ml6 .letters')
@@ -91,16 +93,26 @@ onMounted(() => {
 <template>
   <div class="flex justify-between items-center px-20 h-screen gap-20">
     <div class="w-1/2">
+      <div class="buttons mt-20">
+        <button class="button-item" @click="setLocale(locale === 'en' ? 'pt' : 'en')">
+          <Icon
+            size="30"
+            name="material-symbols:translate"
+            style="color: #a855f7;"
+          />
+        </button>
+      </div>
+
       <main>
-        <h1 class="pt-64 ml6 text-7xl font-black">
+        <h1 class="pt-40 ml6 text-7xl font-black">
           <span class="text-wrapper">
-            <span class="letters">Welcome!</span>
+            <span class="letters">{{ $t('mainSection.welcome') }}</span>
           </span>
         </h1>
 
         <h2 id="presentation" class="text-3xl mt-4 font-extrabold">
-          My name is
-          <span class="text-purple-500">Vinícius Morandi</span>, and I build applications on the web
+          {{ $t('mainSection.myNameIs') }}
+          <span class="text-purple-500">Vinícius Morandi</span>, {{ $t('mainSection.andIBuild') }}
         </h2>
       </main>
 
@@ -125,17 +137,18 @@ onMounted(() => {
         <footer>
           <ul class="flex gap-1 mt-32 -ml-4">
             <li
-            v-for="social in socials"
-            :key="social.icon"
-            class="button-item"
+              v-for="social in socials"
+              :key="social.icon"
+              class="button-item"
             >
-            <AnimatedTooltip
-              :text="social.text"
-            >
-              <a :href="social.href" :target="social.href.includes('mailto') ? null : '_blank'">
-                <Icon size="30" :name="social.icon" style="color: #a855f7;" />
-              </a>
-            </AnimatedTooltip>
+              <AnimatedTooltip :text="social.text">
+                <a
+                  :href="social.href"
+                  :target="social.href.includes('mailto') ? null : '_blank'"
+                >
+                  <Icon size="30" :name="social.icon" style="color: #a855f7;" />
+                </a>
+              </AnimatedTooltip>
             </li>
           </ul>
         </footer>

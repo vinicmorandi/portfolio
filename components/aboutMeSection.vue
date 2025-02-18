@@ -56,45 +56,35 @@ onMounted(() => {
   <section class="flex flex-col gap-6 justify-center h-full items-center px-8">
     <div class="testimonial">
       <p class="text-base text-gray-400">
-        I am an accomplished Full-Stack Developer with expertise in
-        designing and implementing advanced solutions, including
-        <span class="font-semibold text-gray-300">AI-driven tools</span>,
-        <span class="font-semibold text-gray-300">ERP systems</span>,
-        <span class="font-semibold text-gray-300">e-commerce platforms</span>, and
-        <span class="font-semibold text-gray-300">mobile applications</span>. I bring a strong commitment to excellence,
-        adaptability, and a
-        collaborative mindset to every project. My professional experience
-        includes over a year of contributing to a remote, U.S.-based team,
-        where I consistently delivered impactful results and surpassed
-        expectations.
+        {{ $t('aboutMeSection.iAmAnAccomplished') }}
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.aiDrivenTools') }}</span>,
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.erpSystems') }}</span>,
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.ecommercePlatforms') }}</span>, {{ $t('aboutMeSection.and') }}
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.mobileApplications') }}</span>.
+        {{ $t('aboutMeSection.iBring') }}
       </p>
     </div>
     <div class="testimonial">
       <p class="text-base text-gray-400">
-        Currently, I'm a Software Development Specialist at
+        {{ $t('aboutMeSection.currentlyIm') }}
         <a
           href="https://sagui.ai"
           target="_blank"
           class="text-purple-600 font-semibold">
           Sagui.AI
         </a>
-        , where I worked on a website generator, a mobile app generator with
-        collaborative features, and a WhatsApp automation system for custom
-        workflows and AI-generated content. I also designed a social media
-        planner that streamlines scheduling, analytics, and posting, while
-        migrating the codebase to the latest Vue 3 + Nuxt framework —
-        integrating comprehensive testing along the way — and developing
-        <span class="font-semibold text-gray-300">scalable</span>,
-        <span class="font-semibold text-gray-300">accessible</span>
-        components and APIs that enhance the overall platform functionality.
+        {{ $t('aboutMeSection.whereIWorked') }}
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.scalable') }}</span>,
+        <span class="font-semibold text-gray-300">{{ $t('aboutMeSection.accessible') }}</span>
+        {{ $t('aboutMeSection.componentsAnd') }}
       </p>
     </div>
 
     <div class="testimonial">
       <p class="text-base text-gray-400">
-        In my spare time, I'm usually reading, hanging out with 
+        {{ $t('aboutMeSection.inMySpareTime') }}
         <span class="cute-text font-semibold" @mouseover="activateCherry" @mouseout="deactivateCherry">Cherry</span>,
-        or trying to get a golden seal on all jokers in Balatro.
+        {{ $t('aboutMeSection.orTryingToGet') }}
       </p>
     </div>
     
