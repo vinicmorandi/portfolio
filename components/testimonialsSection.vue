@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
   <section class="flex flex-col justify-center items-center mx-auto px-8">
     <article
-      class="testimonial flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 pb-6 lg:pb-10"
+      class="testimonial flex flex-col sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 pb-6"
     >
       <NuxtImg
         class="h-12 self-start -ml-2 -mb-4"
