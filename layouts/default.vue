@@ -13,19 +13,13 @@ const distance = computed(() =>
 )
 
 const size = computed(() => Math.max(600 - distance.value / 4, 200))
-
-useSeoMeta({
-  title: 'Portfolio - Vinícius Morandi',
-  ogTitle: 'Portfolio - Vinícius Morandi',
-  description: "I'm Vinícius Morandi, a software developer that specializes in creating phenomenal digital experiences.",
-  ogDescription: "I'm Vinícius Morandi, a software developer that specializes in creating phenomenal digital experiences.",
-})
 </script>
 
 <template>
   <div>
     <ClientOnly>
       <div
+        v-if="width > 1024"
         class="fixed rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         :style="{
           background:

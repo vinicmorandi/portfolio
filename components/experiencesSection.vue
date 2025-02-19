@@ -82,7 +82,7 @@ const experiences = computed(() => [
 <template>
   <section>
     <ol
-      class="mx-8 px-2 py-2 relative border-s border-gray-200 dark:border-gray-700"
+      class="ml-8 lg:mx-8 px-2 py-2 relative border-s border-gray-200 dark:border-gray-700"
     >
       <a
         v-for="(experience, index) in experiences"
@@ -116,14 +116,14 @@ const experiences = computed(() => [
           >
             {{ experience.startDate }} - {{ experience.endDate }}
           </time>
-          <p class="my-4 text-base font-normal text-gray-400">
+          <p class="my-4 text-sm lg:text-base font-normal text-gray-400">
             {{ experience.description }}
           </p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in experience.tags"
               :key="tag"
-              class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-sm dark:bg-purple-900 dark:text-purple-300 rounded-xl"
+              class="bg-purple-100 text-purple-800 text-xs lg:text-sm font-medium px-3 py-1 rounded-sm dark:bg-purple-900 dark:text-purple-300 rounded-xl"
             >
               {{ tag }}
             </span>

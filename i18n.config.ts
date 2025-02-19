@@ -60,7 +60,7 @@ export default defineI18nConfig(() => ({
         eccosysInternship: {
           position: 'Web Development Intern',
           startDate: 'September 2021',
-          endDate: 'April 2022',
+          endDate: 'February 2022',
           description: 'Had my first experience developing websites on a professional setting, fixed bugs and added new features and customizations to a monolithic code base, and developed a strong understanding of scalability challenges, third-party integrations, and sustainable code architecture through hands-on collaboration in refining legacy systems and delivering tailored solutions.',
         }
       },
@@ -88,7 +88,7 @@ export default defineI18nConfig(() => ({
         socials: {
           email: 'Envie-me um email',
           resume: 'Currículo',
-          resumeUrl: 'https://docs.google.com/document/d/1U2_Nj58VzFFuh9HxCjgWuMLv2zqxR3asJSThPFgnerw/edit?usp=sharing',
+          resumeUrl: 'https://docs.google.com/document/d/1PABEBkTm7kZF2G3AKTYdkewVcGbYI5rT_YL3VG0sxv4/edit?usp=sharing',
         },
       },
       aboutMeSection: {
@@ -135,7 +135,7 @@ export default defineI18nConfig(() => ({
         eccosysInternship: {
           position: 'Estagiário em Desenvolvimento Web',
           startDate: 'Setembro de 2021',
-          endDate: 'Abril de 2022',
+          endDate: 'Fevereiro de 2022',
           description: 'Tive minha primeira experiência desenvolvendo websites em ambiente profissional, corrigi bugs e adicionei novos recursos e personalizações a uma base de código monolítica, e desenvolvi uma sólida compreensão dos desafios de escalabilidade, integrações de terceiros e arquitetura de código sustentável através da colaboração prática no refinamento de sistemas legados e entrega de soluções personalizadas.',
         }
       },

@@ -1,8 +1,9 @@
 <script setup>
 import anime from 'animejs/lib/anime.es.js'
-import { useMouse } from "@vueuse/core"
+import { useMouse, useWindowSize } from "@vueuse/core"
 
 const { x, y } = useMouse()
+const { width } = useWindowSize()
 
 const cherriesActive = ref(false)
 
@@ -40,6 +41,24 @@ const deactivateCherry = () => {
   }, 100)  
 }
 
+const cherryPosition = computed(() => {
+  if (!cherriesActive.value) {
+    return {
+      top: '-100vh',
+      left: '-100vw',
+    }
+  }
+
+  return {
+    top: width.value < 1024 
+      ? '10px' 
+      :  `${y.value - 200}px`,
+    left: width.value < 1024 
+      ? '10px' 
+      :  `${x.value - 230}px`,
+  }
+})
+
 onMounted(() => {
   anime.timeline({ loop: false }).add({
     targets: '.testimonial',
@@ -53,7 +72,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="flex flex-col gap-6 justify-center h-full items-center px-8">
+  <section class="flex flex-col my-12 lg:my-40 gap-6 px-8">
     <div class="testimonial">
       <p class="text-base text-gray-400">
         {{ $t('aboutMeSection.iAmAnAccomplished') }}
@@ -93,15 +112,14 @@ onMounted(() => {
       class="rounded-xl pointer-events-none bg-neutral-900 p-8 border-2 border-transparent hover:border-[#fcbbc7]"
       :style="{
         position: 'fixed',
-        top: cherriesActive ? `${y - 200}px` : '-100vh',
-        left: cherriesActive ? `${x - 230}px` : '-100vw',
+        top: cherryPosition.top,
+        left: cherryPosition.left,
       }"
     >
       <NuxtImg
-        class="rounded-xl bg-gray-800"
+        class="rounded-xl w-[calc(80vw-20px)] h-auto lg:h-auto lg:w-auto bg-gray-800"
         src="/cherry/1.webp"
         alt="Cherry, my lovely cat"
-        height="200"
       />
       <figcaption class="mt-8 flex items-center justify-center gap-x-6">
           <span class="center cute-text text-3xl font-semibold tracking-wide text-white">

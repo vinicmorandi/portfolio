@@ -24,7 +24,7 @@ onMounted(() => {
 
 <template>
   <button
-    class="custom_button flex items-center text-purple-500 font-medium uppercase text-xl"
+    class="custom_button text-base lg:text-lg flex items-center text-purple-500 font-medium uppercase"
     :class="{
       isActive,
     }"
@@ -37,7 +37,6 @@ onMounted(() => {
 <style lang="scss">
 .custom_button {
   cursor: pointer;
-  font-size: 18px;
   position: relative;
   white-space: nowrap;
 

@@ -91,9 +91,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-between items-center px-20 h-screen gap-20">
-    <div class="w-1/2">
-      <div class="buttons mt-20">
+  <div class="flex justify-between items-center px-8 lg:px-20 h-full lg:gap-20">
+    <div class="w-full lg:w-1/2">
+      <div class="buttons mt-10 lg:mt-20">
         <button class="button-item" @click="setLocale(locale === 'en' ? 'pt' : 'en')">
           <Icon
             size="30"
@@ -104,21 +104,21 @@ onMounted(() => {
       </div>
 
       <main>
-        <h1 class="pt-32 ml6 text-7xl font-black">
+        <h1 class="text-center lg:text-left pt-24 lg:pt-32 ml6 text-4xl lg:text-7xl font-black">
           <span class="text-wrapper">
             <span class="letters">{{ $t('mainSection.welcome') }}</span>
           </span>
         </h1>
 
-        <h2 id="presentation" class="text-3xl mt-4 font-extrabold">
+        <h2 id="presentation" class="text-center lg:text-left text-lg lg:text-3xl mt-4 font-extrabold">
           {{ $t('mainSection.myNameIs') }}
           <span class="text-purple-500">Vinícius Morandi</span>, {{ $t('mainSection.andIBuild') }}
         </h2>
       </main>
 
-      <div class="buttons mt-16 flex flex-col gap-4">
+      <div class="buttons mt-8 lg:mt-16 flex flex-col gap-4">
         <nav>
-          <ul class="buttons mt-16 flex flex-col gap-4">
+          <ul class="buttons mt-4 lg:mt-16 flex flex-col items-center lg:items-start gap-3 lg:gap-4">
             <li
               v-for="section in sections"
               :key="section.text"
@@ -135,7 +135,7 @@ onMounted(() => {
         </nav>
 
         <footer>
-          <ul class="flex gap-1 mt-32 -ml-4">
+          <ul class="flex justify-center lg:justify-start gap-0.5 lg:gap-1 mt-20 lg:mt-32 lg:-ml-4">
             <li
               v-for="social in socials"
               :key="social.icon"
@@ -155,10 +155,22 @@ onMounted(() => {
       </div>
     </div>
     <div
-      class="w-1/2 h-[80vh] overflow-y-auto scroll-smooth [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-neutral-700 [&::-webkit-scrollbar-thumb]:bg-neutral-500"
+      v-if="width > 1024 || activeSection?.component"
+      class="z-10 lg:z-0 w-screen bg-[#121212] absolute lg:relative left-0 top-0 lg:w-1/2 h-screen lg:h-[80vh] overflow-y-auto scroll-smooth [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-neutral-700 [&::-webkit-scrollbar-thumb]:bg-neutral-500"
     >
+      <div class="lg:hidden ml-4 my-6 flex">
+        <Icon
+            size="30"
+            style="color: #a855f7;" 
+            name="material-symbols:chevron-left-rounded"
+          />
+        <CustomButton @click="activeSection = null">
+          Back
+        </CustomButton>
+      </div>
+
       <component
-        :is="activeSection?.component"
+        :is="{...activeSection.component}"
         v-if="activeSection?.component"
       />
     </div>

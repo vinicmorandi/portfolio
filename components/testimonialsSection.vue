@@ -14,9 +14,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="flex flex-col justify-center items-center h-full mx-auto px-8">
+  <section class="flex flex-col justify-center items-center mx-auto px-8">
     <article
-      class="testimonial flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 pb-10"
+      class="testimonial flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 pb-6 lg:pb-10"
     >
       <NuxtImg
         class="h-12 self-start -ml-2 -mb-4"
@@ -24,18 +24,18 @@ onMounted(() => {
         alt="Sagui.AI logo"
       />
       <figure class="mt-10 flex flex-auto flex-col justify-between">
-        <blockquote class="text-base text-gray-300">
+        <blockquote class="text-sm lg:text-base text-gray-300">
           <p>
             "{{$t('testimonialsSection.marcio.text')}}”
           </p>
         </blockquote>
-        <figcaption class="mt-10 flex items-center gap-x-6">
+        <figcaption class="mt-10 flex items-center gap-x-3 lg:gap-x-6">
           <NuxtImg
-            class="size-14 rounded-full bg-gray-800"
+            class="size-10 lg:size-14 rounded-full bg-gray-800"
             src="/images/marcio.jpg"
             :alt="`Márcio Bortolini dos Santos, ${$t('testimonialsSection.marcio.position')}`"
           />
-          <div class="text-base">
+          <div class="text-sm lg:text-base">
             <div class="font-semibold text-white">
               Márcio Bortolini dos Santos
             </div>
@@ -47,27 +47,27 @@ onMounted(() => {
       </figure>
     </article>
 
-    <div class="testimonial border-t h-[1px] w-full border-white/10 mt-10"/>
+    <div class="testimonial border-t h-[1px] w-full border-white/10 mt-6 lg:mt-10"/>
 
-    <article class="testimonial flex flex-col pt-10">
+    <article class="testimonial flex flex-col pt-6 lg:pt-10 pb-6 lg:pb-0">
       <NuxtImg
         class="h-12 self-start -ml-2 -mb-4"
         src="/logos/saguiai.webp"
         alt="Sagui.AI logo"
       />
       <figure class="mt-10 flex flex-auto flex-col justify-between">
-        <blockquote class="text-base text-gray-300">
+        <blockquote class="text-sm lg:text-base text-gray-300">
           <p>
             {{ $t('testimonialsSection.fabio.text') }}”
           </p>
         </blockquote>
-        <figcaption class="mt-10 flex items-center gap-x-6">
+        <figcaption class="mt-10 flex items-center gap-x-3 lg:gap-x-6">
           <NuxtImg
-            class="size-14 rounded-full bg-gray-800"
+            class="size-10 lg:size-14 rounded-full bg-gray-800"
             src="/images/fabio.jpg"
             :alt="`Fábio Brand, ${$t('testimonialsSection.fabio.position')}`"
           />
-          <div class="text-base">
+          <div class="text-sm lg:text-base">
             <div class="font-semibold text-white">Fábio Brand</div>
             <div class="mt-1 text-gray-400">{{ $t('testimonialsSection.fabio.position') }}</div>
           </div>
