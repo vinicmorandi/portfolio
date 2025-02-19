@@ -58,7 +58,7 @@ onMounted(() => {
       <figure class="mt-10 flex flex-auto flex-col justify-between">
         <blockquote class="text-sm lg:text-base text-gray-300">
           <p>
-            {{ $t('testimonialsSection.fabio.text') }}”
+            "{{ $t('testimonialsSection.fabio.text') }}”
           </p>
         </blockquote>
         <figcaption class="mt-10 flex items-center gap-x-3 lg:gap-x-6">
